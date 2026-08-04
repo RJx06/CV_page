@@ -1,0 +1,184 @@
+@font-face {
+    font-family: 'KH2_ALL_MENU_I';
+    src: url('../resources/fonts/KH2_ALL_MENU_I.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DFP';
+    src: url('../resources/fonts/DFPW5_EUR.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --font-family: 'KH2_ALL_MENU_I', sans-serif;
+    --nav-height: 50px;
+    --background-color:#F3D84D ;
+    --background: linear-gradient(90deg,rgba(243, 216, 77, 1) 0%, rgba(230, 183, 53, 1) 71%, rgba(183, 142, 27, 1) 94%);
+}
+
+body {
+    margin: 0;
+    background-color: black;
+}
+
+.mainNav ul{
+    font-family: var(--font-family);
+    display: grid;
+    text-align: center;
+    height: var(--nav-height);
+    grid-template-columns: auto auto auto auto auto;
+    background: var(--background);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transition: 0.5s;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.mainNav ul li:hover {
+    background-color: #7d5f18;
+    transition: 0.5s;
+}
+
+.mainNav ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--nav-height);
+    padding: 0 16px;
+}
+
+.mainNav form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.mainNav form input{
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+}
+
+.mainNav a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.mainContent {
+    color: white;
+    padding-top: var(--nav-height);
+}
+.mainContent h3{
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+.mainContent p{
+    text-align: center;
+    font-family: DFP;
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.mainFooter {
+    text-align: center;
+    background:  var(--background);
+    color: white;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    position: fixed;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 64px;
+
+    text-align: center;
+}
+
+.card article{
+    padding: 10px;
+    margin: 10px;
+    background:  var(--background);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 0.5rem;
+    transition: 0.5s;
+}
+
+.card article:hover {
+    transform: translate(0,-10px);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.card h4 {
+    color: rgb(252, 252, 252);
+    font-family: var(--font-family);
+}
+
+.card p {
+    color: rgb(252, 252, 252);
+}
+
+.searchForm {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.searchForm input{
+    flex: 1;
+    min-width: 0;
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: darkgrey;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+.searchForm button{
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.searchForm input:hover{
+    background-color: #fffbe6;
+}
+
+.searchForm input:focus{
+    background-color: #ffffff;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(243, 216, 77, 0.25);
+    transform: translateY(-1px);
+}
+
+.searchForm input::placeholder{
+    color: #4d4d4d;
+}
+
+.Filters {
+    display: grid;
+    grid-template-columns: 10% 10% 10% 10%;
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
