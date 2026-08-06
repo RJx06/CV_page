@@ -1,184 +1,175 @@
-@font-face {
-    font-family: 'KH2_ALL_MENU_I';
-    src: url('../resources/fonts/KH2_ALL_MENU_I.TTF') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'DFP';
-    src: url('../resources/fonts/DFPW5_EUR.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
 :root {
-    --font-family: 'KH2_ALL_MENU_I', sans-serif;
-    --nav-height: 50px;
-    --background-color:#F3D84D ;
-    --background: linear-gradient(90deg,rgba(243, 216, 77, 1) 0%, rgba(230, 183, 53, 1) 71%, rgba(183, 142, 27, 1) 94%);
+    --primary-color: #0f172a;
+    --secondary-color: #3b82f6;
+    --background-color: #f8fafc;
+    --card-bg: #ffffff;
+    --text-color: #334155;
+    --text-light: #94a3b8;
+    --font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
 body {
     margin: 0;
-    background-color: black;
-}
-
-.mainNav ul{
-    font-family: var(--font-family);
-    display: grid;
-    text-align: center;
-    height: var(--nav-height);
-    grid-template-columns: auto auto auto auto auto;
-    background: var(--background);
-    list-style: none;
-    margin: 0;
     padding: 0;
-    transition: 0.5s;
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-.mainNav ul li:hover {
-    background-color: #7d5f18;
-    transition: 0.5s;
-}
-
-.mainNav ul li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: var(--nav-height);
-    padding: 0 16px;
-}
-
-.mainNav form{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-}
-
-.mainNav form input{
-    border-radius: 5px;
-    border: none;
-    padding: 5px;
-}
-
-.mainNav a{
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-}
-
-.mainContent {
-    color: white;
-    padding-top: var(--nav-height);
-}
-.mainContent h3{
-    text-align: center;
     font-family: var(--font-family);
-    font-size: 2rem;
-    margin-top: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
 }
 
-.mainContent p{
-    text-align: center;
-    font-family: DFP;
-    font-size: 1.2rem;
-    margin-top: 10px;
-}
-
-.mainFooter {
-    text-align: center;
-    background:  var(--background);
+.hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #1e293b 100%);
     color: white;
-    bottom: 0;
-    width: 100%;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.hero h1 {
     margin: 0;
-    position: fixed;
+    font-size: 3rem;
+    letter-spacing: 1px;
+}
+
+.hero h2 {
+    margin: 10px 0 20px 0;
+    font-weight: 400;
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+}
+
+.hero p {
+    color: #cbd5e1;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: -40px auto 40px auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+}
+
+h3 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.grid-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
 }
 
 .card {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 64px;
-
-    text-align: center;
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
-.card article{
-    padding: 10px;
-    margin: 10px;
-    background:  var(--background);
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-    border-radius: 0.5rem;
-    transition: 0.5s;
+.skills ul {
+    list-style-type: square;
+    padding-left: 20px;
 }
 
-.card article:hover {
-    transform: translate(0,-10px);
-    transition: 0.5s;
-    cursor: pointer;
+.skills li {
+    margin-bottom: 12px;
 }
 
-.card h4 {
-    color: rgb(252, 252, 252);
-    font-family: var(--font-family);
+.skills strong {
+    color: var(--secondary-color);
 }
 
-.card p {
-    color: rgb(252, 252, 252);
-}
-
-.searchForm {
+.tags {
     display: flex;
-    gap: 8px;
-    align-items: center;
-    margin: 20px auto;
-    width: 90%;
-    max-width: 1200px;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
 }
 
-.searchForm input{
-    flex: 1;
-    min-width: 0;
-    padding: 8px 10px;
-    border-radius: 5px;
-    border: none;
-    background-color: darkgrey;
-    transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+.tags span {
+    background-color: #e0f2fe;
+    color: #0369a1;
+    padding: 8px 16px;
+    border-radius: 99px;
+    font-size: 0.9rem;
+    font-weight: bold;
 }
 
-.searchForm button{
-    padding: 8px 12px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
+.education-section ul {
+    list-style: none;
+    padding: 0;
 }
 
-.searchForm input:hover{
-    background-color: #fffbe6;
+.education-section li {
+    margin-bottom: 10px;
 }
 
-.searchForm input:focus{
-    background-color: #ffffff;
-    outline: none;
-    box-shadow: 0 0 0 4px rgba(243, 216, 77, 0.25);
-    transform: translateY(-1px);
+.contact-section p {
+    font-size: 1.1rem;
 }
 
-.searchForm input::placeholder{
-    color: #4d4d4d;
+.contact-section a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.Filters {
-    display: grid;
-    grid-template-columns: 10% 10% 10% 10%;
-    gap: 16px;
-    justify-content: center;
-    margin-bottom: 20px;
+.contact-section a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .grid-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    will-change: opacity, transform;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.grid-section .card:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.grid-section .card:nth-child(2) {
+    transition-delay: 0.3s;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }

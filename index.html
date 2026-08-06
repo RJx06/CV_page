@@ -1,67 +1,68 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Pagina de prueba para demostrar la estructura basica de una pagina web utilizando HTML y CSS.">
-        <meta name="keywords" content="HTML, CSS, JavaScript, pagina de prueba, ejemplo de pagina web">
-        <meta name="author" content="Your mama">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>José Angel Méndez B.</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <header class="hero fade-in">
+        <div class="hero-content">
+            <h1>José Angel Méndez B.</h1>
+        </div>
+    </header>
 
-        <meta property="og:title" content="Keyblade Finder">
-        <meta property="og:description" content="Conoce todas las keyblades de Kingdom Hearts, sus habilidades y donde encontrarlas.">
-        <meta property="og:image" content="resources/images/favicon_io/android-chrome-512x512.png">
-        <meta property="og:image:alt" content="Guard Tyrone">
-        <meta property="og:type" content="website"> 
+    <main class="container">
+        <section class="profile-section fade-in">
+            <h3>Mi Perfil</h3>
+            <p>Joven estudiante del 8vo semestre de Ingeniería en Computación en la Universidad José Antonio Páez. Con conocimientos en programación y desarrollo y manejo de base de datos. Creación, mantenimiento y mejoras de los sitios Web.</p>
+        </section>
 
-        <title>Landing Page super epica con CV</title>
-        <link rel="stylesheet" href="css/index.css">
-        <link rel="icon" type="image/png" href="resources\images\favicon_io\favicon-32x32.png">
-        <script src="script.js"></script>
-    </head>
-    <body>  
-        <header>
-            <nav class="mainNav">
+        <section class="grid-section">
+            <div class="card skills fade-in">
+                <h3>Habilidades Técnicas</h3>
                 <ul>
-                    <li class="li element"><a href="index.html">Inicio</a></li>
-                    <li class="li element"><a href="html\search.html">Buscador</a></li>
-                    <li class="li element"><a href="html/list.html">Proyectos</a></li>
-                    <li class="li element"><a href="html/platforms.html">Imagenes</a></li>
-                    <li class="li element"><a href="html\about.html">Acerca de</a></li>
+                    <li>Creación de estructuras semánticas con <strong>HTML</strong>.</li>
+                    <li>Definición de estilos y animaciones con <strong>CSS</strong>.</li>
+                    <li>Dinamismo con <strong>JavaScript</strong>.</li>
+                    <li>Creación de interfaces de usuario dinámicas con <strong>React</strong>.</li>
+                    <li>Creación, mantenimiento y manejo de bases de datos con <strong>SQL</strong>.</li>
                 </ul>
-            </nav>
-        </header>
-        <main class ="mainContent">
-            <section>
-                <header>
-                    <h3>Jose Ángel Méndez</h3>
-                    <p></p>
-                </header>
-                <footer>
-                    <p>Gracias por visitar mi pagina. Espero que encuentres la informacion util e interesante.</p>
-                </footer>
-            </section>
-            <section>
-                <header>
-                    <h3>Tecnologias Usadas</h3>
-                </header>
-                <section class="card">
-                <article>
-                    <h4>HTML</h4>
-                    <p>Para el contenido de la pagina</p>
-                </article>
-                <article>
-                    <h4>CSS</h4>
-                    <p>Para el diseño y la apariencia de la pagina</p>  
-                </article>
-                <article>
-                    <h4>JavaScript</h4>
-                    <p>Para la interactividad y funcionalidad de la pagina</p>  
-                </article>
-                </section>
-            </section>
-        </main>
-        <footer class="mainFooter">
-            <small>&copy;Copyright inexistente 2025</small>
-        </footer>
-    </body>
+            </div>
+
+            <div class="card values fade-in">
+                <h3>Valores</h3>
+                <div class="tags">
+                    <span>Responsable</span>
+                    <span>Honesto</span>
+                    <span>Empático</span>
+                    <span>Resolutivo</span>
+                    <span>Comunicativo</span>
+                    <span>Trabajo en equipo</span>
+                </div>
+            </div>
+        </section>
+        
+        <section class="education-section fade-in">
+            <h3>Educación</h3>
+            <ul>
+                <li><strong>Universidad José Antonio Páez (UJAP)</strong> - Ingeniería en Computación (7mo Semestre)</li>
+                <li><strong>UE CABIMBU</strong></li>
+            </ul>
+        </section>
+
+        <section class="contact-section fade-in">
+            <h3>Contacto</h3>
+            <p><strong>Email:</strong> <a href="mailto:joseamendezborges@gmail.com">joseamendezborges@gmail.com</a></p>
+            <p><strong>Teléfono:</strong> <a href="tel:+5804244578761">(+58) 0424-4578761</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 José Angel Méndez B. - Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
 </html>
